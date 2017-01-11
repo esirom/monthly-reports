@@ -1,3 +1,11 @@
+<?php
+  $c = ($_GET['content']);
+  if (!c || $c == '' || !isset($c) || empty($c)) {
+    $c = 'dashboard';
+  }
+
+  if (!file_exists('content/'.$c.'.php')) $c = 'dashboard';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +25,8 @@
    <!-- WHIRL (spinners)-->
    <link rel="stylesheet" href="../vendor/whirl/dist/whirl.css">
    <!-- =============== PAGE VENDOR STYLES ===============-->
+   <!-- WEATHER ICONS-->
+   <link rel="stylesheet" href="../vendor/weather-icons/css/weather-icons.min.css">
    <!-- =============== BOOTSTRAP STYLES ===============-->
    <link rel="stylesheet" href="css/bootstrap.css" id="bscss">
    <!-- =============== APP STYLES ===============-->
@@ -28,25 +38,35 @@
       <!-- top navbar-->
       <header class="topnavbar-wrapper">
          <!-- START Top Navbar-->
-          <!-- TODO: Include top-navbar.php -->
+          <?php
+            include_once 'content/partials/top-navbar.php';
+          ?>
          <!-- END Top Navbar-->
       </header>
       <!-- sidebar-->
       <aside class="aside">
          <!-- START Sidebar (left)-->
-            <!-- TODO: Include sidebar-left.php -->
+         <?php
+           include_once 'content/partials/sidebar-left.php';
+         ?>
          <!-- END Sidebar (left)-->
       </aside>
       <!-- offsidebar-->
       <aside class="offsidebar hide">
          <!-- START Off Sidebar (right)-->
-            <!-- TODO: Include sidebar-right.php -->
+         <?php
+           include_once 'content/partials/sidebar-right.php';
+         ?>
          <!-- END Off Sidebar (right)-->
       </aside>
       <!-- Main section-->
       <section>
          <!-- Page content-->
-         <!-- TODO: Code view controller -->
+         <?php
+          if ($c != 'dashboard') { }
+
+          include_once 'content/'.$c.'.php';
+         ?>
       </section>
       <!-- Page footer-->
       <footer>
@@ -77,6 +97,22 @@
    <!-- RTL demo-->
    <script src="js/demo/demo-rtl.js"></script>
    <!-- =============== PAGE VENDOR SCRIPTS ===============-->
+   <!-- SPARKLINE-->
+   <script src="../vendor/sparkline/index.js"></script>
+   <!-- FLOT CHART-->
+   <script src="../vendor/Flot/jquery.flot.js"></script>
+   <script src="../vendor/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+   <script src="../vendor/Flot/jquery.flot.resize.js"></script>
+   <script src="../vendor/Flot/jquery.flot.pie.js"></script>
+   <script src="../vendor/Flot/jquery.flot.time.js"></script>
+   <script src="../vendor/Flot/jquery.flot.categories.js"></script>
+   <script src="../vendor/flot-spline/js/jquery.flot.spline.min.js"></script>
+   <!-- CLASSY LOADER-->
+   <script src="../vendor/jquery-classyloader/js/jquery.classyloader.min.js"></script>
+   <!-- MOMENT JS-->
+   <script src="../vendor/moment/min/moment-with-locales.min.js"></script>
+   <!-- DEMO-->
+   <script src="js/demo/demo-flot.js"></script>
    <!-- =============== APP SCRIPTS ===============-->
    <script src="js/app.js"></script>
 </body>
