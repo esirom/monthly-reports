@@ -52,6 +52,25 @@
             </ul>
          </li>
          <li class=" ">
+            <a href="#reports" title="Dashboard" data-toggle="collapse">
+               <em class="icon-docs"></em>
+               <span data-localize="">Reports</span>
+            </a>
+            <ul id="reports" class="nav sidebar-subnav collapse">
+               <li class="sidebar-subnav-header">Reports</li>
+               <li class=" ">
+                  <a href="?content=make-a-report" title="Dashboard v1">
+                     <span>Do A Report</span>
+                  </a>
+               </li>
+               <li class=" ">
+                  <a href="?content=view-reports" title="Dashboard v2">
+                     <span>View Reports</span>
+                  </a>
+               </li>
+            </ul>
+         </li>
+         <li class=" ">
             <a href="documentation.html" title="Documentation">
                <em class="icon-graduation"></em>
                <span data-localize="sidebar.nav.DOCUMENTATION">Documentation</span>
