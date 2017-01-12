@@ -1,6 +1,28 @@
 <div class="content-wrapper">
    <h3>Make A Report</h3>
    <div class="row">
+     <div class="col-md-2">
+       <select class="form-control m-b">
+        <option value='01'>January</option>
+        <option value='02'>February</option>
+        <option value='03'>March</option>
+        <option value='04'>April</option>
+        <option value='05'>May</option>
+        <option value='06'>June</option>
+        <option value='07'>July</option>
+        <option value='08'>August</option>
+        <option value='09'>September</option>
+        <option value='10'>October</option>
+        <option value='11'>November</option>
+        <option value='12'>December</option>
+       </select>
+     </div>
+     <div class="col-md-10">
+       <select id="brandSelect" class="form-control m-b"></select>
+     </div>
+   </div>
+   <br>
+   <div class="row">
       <div class="col-md-12">
         <div id="newNetFollowers" class="panel panel-default panel-demo">
            <div class="panel-heading panel-heading-collapsed">Platforms - New Net Followers
@@ -25,18 +47,18 @@
                          <tbody>
                             <tr>
                                <td>This Month</td>
-                               <td><input type="text" class="form-control" value="456"></td>
-                               <td><input type="text" class="form-control" value="643"></td>
+                               <td><input id="thisMnthFb" type="text" class="form-control" value=""></td>
+                               <td><input id="thisMnthIg" type="text" class="form-control" value=""></td>
                             </tr>
                             <tr>
                                <td>Last Month</td>
-                               <td><input type="text" class="form-control" value="342" disabled></td>
-                               <td><input type="text" class="form-control" value="523" disabled></td>
+                               <td><input type="text" class="form-control" value="" disabled></td>
+                               <td><input type="text" class="form-control" value="" disabled></td>
                             </tr>
                             <tr>
                                <td>Month Before That</td>
-                               <td><input type="text" class="form-control" value="235" disabled></td>
-                               <td><input type="text" class="form-control" value="321" disabled></td>
+                               <td><input type="text" class="form-control" value="" disabled></td>
+                               <td><input type="text" class="form-control" value="" disabled></td>
                             </tr>
                          </tbody>
                       </table>
@@ -46,7 +68,7 @@
                 </div>
               </div>
               <div class="panel-footer">
-                <button type="button" class="mb-sm btn btn-primary">Save</button>
+                <button type="button" id="genStatsSave" class="mb-sm btn btn-primary">Save</button>
               </div>
            </div>
         </div>
@@ -752,24 +774,4 @@
      </div>
    </div>
 </div>
-<script type="text/javascript">
-  $('#oprComments').click(function() {
-    $('#oprEditor').toggle(this.checked);
-  });
-
-  $('#lcsComments').click(function() {
-    $('#lcsEditor').toggle(this.checked);
-  });
-
-  $('#topPerfFbComments').click(function() {
-    $('#topPerfFbEditor').toggle(this.checked);
-  });
-
-  $('#lowPerfFbComments').click(function() {
-    $('#lowPerfFbEditor').toggle(this.checked);
-  });
-
-  $('#IgEngComments').click(function() {
-    $('#IgEngEditor').toggle(this.checked);
-  });
-</script>
+<script type="text/javascript" src="/app/jscontrollers/make-a-report.js"></script>
