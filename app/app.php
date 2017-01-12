@@ -127,7 +127,7 @@
       </section>
       <!-- Page footer-->
       <footer>
-         <span>&copy; 2016 - Angle</span>
+         <span>&copy; 2017 - Esirom Ltd.</span>
       </footer>
    </div>
    <!-- =============== VENDOR SCRIPTS ===============-->
