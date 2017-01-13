@@ -31,8 +31,12 @@ $.ajax({
 $('#genStatsSave').click(function() {
   var facebookLikes = $('#thisMnthFb').val();
   var instagramFollowers = $('#thisMnthIg').val();
+  var selectedMonth = $('#monthSelector').val();
+  var selectedYear = year;
   var data = {
     "brandId": 1,
+    "month": selectedMonth,
+    "year": selectedYear,
     "facebookLikes": facebookLikes,
     "instagramFollowers": instagramFollowers
   };
@@ -50,3 +54,6 @@ $('#genStatsSave').click(function() {
     }
   });
 });
+
+
+$('#monthSelector option:eq('+month+')').prop('selected', true);
