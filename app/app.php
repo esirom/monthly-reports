@@ -88,6 +88,7 @@
    <!-- =============== APP STYLES ===============-->
    <link rel="stylesheet" href="css/app.css" id="maincss">
    <link rel="stylesheet" href="css/theme-e.css">
+   <script type="text/javascript" src="jscontrollers/app.js"></script>
 </head>
 
 <body>
