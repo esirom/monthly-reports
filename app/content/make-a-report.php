@@ -2,7 +2,7 @@
    <h3>Make A Report</h3>
    <div class="row">
      <div class="col-md-2">
-       <select class="form-control m-b">
+       <select id="monthSelector" class="form-control m-b">
         <option value='01'>January</option>
         <option value='02'>February</option>
         <option value='03'>March</option>
@@ -31,6 +31,7 @@
               </a>
            </div>
            <!-- .panel-wrapper is the element to be collapsed-->
+           <?php // TODO: Automatically put in values for previous month if it is available. ?>
            <div class="panel-wrapper collapse">
               <div class="panel-body">
                 <div class="col-lg-12">
