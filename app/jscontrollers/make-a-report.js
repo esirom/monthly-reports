@@ -5,8 +5,8 @@ $(window).load(function() {
     type: 'GET',
     url: '/app/php/apiv1/check-for-report.php?brandId='+brandId+'&month='+selectedMonth+'&year='+year+'',
     success: function(data) {
-      $('#thisMnthFb').val(data.no_of_likes);
-      $('#thisMnthIg').val(data.no_of_followers);
+      $('#thisMnthFb').val(data.stats.no_of_likes);
+      $('#thisMnthIg').val(data.stats.no_of_followers);
     }
   });
 });
