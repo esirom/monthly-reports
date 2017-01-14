@@ -12,7 +12,12 @@
   if ($fb_result->num_rows > 0) {
     $data = $fb_result->fetch_all(MYSQLI_ASSOC);
     header('Content-type: application/json');
-    print json_encode($data);
+
+    $to_strip = array("[", "]");
+    $unstripped_json = json_encode($data);
+
+    $stripped_json = str_replace($to_strip, "",$unstripped_json);
+    print $stripped_json;
   } else {
     echo "failed";
   }
