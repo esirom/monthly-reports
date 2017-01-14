@@ -1,19 +1,15 @@
 $(window).load(function() {
+  var brandId = $('#brandSelect').val();
+  var selectedMonth = $('#monthSelector').val();
   $.ajax({
     type: 'GET',
-    url: '/app/php/apiv1/check-for-report.php?brandId='+brandId+'&month='+month+'&year='+year+'',
+    url: '/app/php/apiv1/check-for-report.php?brandId='+brandId+'&month='+selectedMonth+'&year='+year+'',
     success: function(data) {
-      var object = data;
       $('#thisMnthFb').val(data.no_of_likes);
-      // TODO: enter data into input fields automatically
+      $('#thisMnthIg').val(data.no_of_followers);
     }
   });
 });
-
-var brandId = $('#brandSelect');
-var facebookLikes = $('#thisMnthFb').val();
-var instagramFollowers = $('#thisMnthIg').val();
-var selectedMonth = $('#monthSelector').val();
 
 $('#oprComments').click(function() {
   $('#oprEditor').toggle(this.checked);
@@ -49,8 +45,13 @@ $.ajax({
 
 $('#genStatsSave').click(function() {
   var selectedYear = year;
+  var brandId = $('#brandSelect').val();
+  var facebookLikes = $('#thisMnthFb').val();
+  var instagramFollowers = $('#thisMnthIg').val();
+  var selectedMonth = $('#monthSelector').val();
+
   var data = {
-    "brandId": 1,
+    "brandId": brandId,
     "month": selectedMonth,
     "year": selectedYear,
     "facebookLikes": facebookLikes,
