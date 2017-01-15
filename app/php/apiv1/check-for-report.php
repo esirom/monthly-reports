@@ -31,6 +31,19 @@
         $data['last_month_stats'] = array('id'=>$last_month_stats['id'], 'no_of_likes'=>$last_month_stats['no_of_likes'], 'no_of_followers'=>$last_month_stats['no_of_followers']);
     }
 
+    //Checking for data from month before previous month.
+    $lastb_month_date = checkForPrevious($last_month_date["last_month"], $last_month_date["last_year"]);
+
+    $lastb_month_engagement_sql = "SELECT * FROM monthly_followers WHERE brand_id='{$brand}' AND month='{$lastb_month_date["last_month"]}' AND year='{$lastb_month_date["last_year"]}'";
+
+    $lastb_month_engagement_result = $connection->query($lastb_month_engagement_sql);
+
+    if ($lastb_month_engagement_result->num_rows > 0) {
+        $lastb_month_stats = $lastb_month_engagement_result->fetch_assoc();
+
+        $data['lastb_month_stats'] = array('id'=>$lastb_month_stats['id'], 'no_of_likes'=>$lastb_month_stats['no_of_likes'], 'no_of_followers'=>$lastb_month_stats['no_of_followers']);
+    }
+
     header('Content-type: application/json');
     echo json_encode($data);
 
