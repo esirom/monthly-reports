@@ -9,6 +9,8 @@ $(window).load(function() {
       $('#thisMnthIg').val(data.stats.no_of_followers);
       $('#lastMnthFb').val(data.last_month_stats.no_of_likes);
       $('#lastMnthIg').val(data.last_month_stats.no_of_followers);
+      $('#lastbMnthFb').val(data.lastb_month_stats.no_of_likes);
+      $('#lastbMnthIg').val(data.lastb_month_stats.no_of_followers);
     }
   });
 });
