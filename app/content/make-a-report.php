@@ -53,8 +53,8 @@
                             </tr>
                             <tr>
                                <td>Last Month</td>
-                               <td><input type="text" class="form-control" value="" disabled></td>
-                               <td><input type="text" class="form-control" value="" disabled></td>
+                               <td><input id="lastMnthFb" type="text" class="form-control" value="" disabled></td>
+                               <td><input id="lastMnthIg" type="text" class="form-control" value="" disabled></td>
                             </tr>
                             <tr>
                                <td>Month Before That</td>
