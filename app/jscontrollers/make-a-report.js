@@ -7,6 +7,8 @@ $(window).load(function() {
     success: function(data) {
       $('#thisMnthFb').val(data.stats.no_of_likes);
       $('#thisMnthIg').val(data.stats.no_of_followers);
+      $('#lastMnthFb').val(data.last_month_stats.no_of_likes);
+      $('#lastMnthIg').val(data.last_month_stats.no_of_followers);
     }
   });
 });
