@@ -599,7 +599,7 @@
                 <h4>The people who have liked, commented on, or shared your post or engaged with your Page in the past 28 days.</h4>
                 <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
              </div>
-             <div class="panel-footer"><button type="button" class="mb-sm btn btn-primary">Save</button></div>
+             <div class="panel-footer"><button type="button" class="mb-sm btn btn-primary" id="saveFbStats">Save</button></div>
           </div>
        </div>
      </div>
