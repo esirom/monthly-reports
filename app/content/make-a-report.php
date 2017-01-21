@@ -74,534 +74,537 @@
            </div>
         </div>
    </div>
+
    <div class="row">
      <div class="col-md-12">
-       <div id="facebookDetails" class="panel panel-default panel-demo">
-          <div class="panel-heading panel-heading-collapsed">Facebook Insights
-             <a href="#" data-tool="panel-collapse" data-toggle="tooltip" title="Collapse Panel" class="pull-right">
-                <em class="fa fa-plus"></em>
-             </a>
-          </div>
-          <!-- .panel-wrapper is the element to be collapsed-->
-          <div class="panel-wrapper collapse">
-             <div class="panel-body">
-                <h2>Facebook Engagement</h2>
+         <form>
+           <div id="facebookDetails" class="panel panel-default panel-demo">
+              <div class="panel-heading panel-heading-collapsed">Facebook Insights
+                 <a href="#" data-tool="panel-collapse" data-toggle="tooltip" title="Collapse Panel" class="pull-right">
+                    <em class="fa fa-plus"></em>
+                 </a>
+              </div>
+              <!-- .panel-wrapper is the element to be collapsed-->
+              <div class="panel-wrapper collapse">
+                 <div class="panel-body">
+                    <h2>Facebook Engagement</h2>
 
-                <h4>Likes, Comments, Shares</h4>
-                <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
-                <br>
+                    <h4>Likes, Comments, Shares</h4>
+                    <input type="file" id="lcsFile" data-classbutton="btn btn-default" class="form-control filestyle">
+                    <br>
 
-                <div class="form-group">
-                   <label class="col-sm-2 control-label">Comments?</label>
-                   <div class="col-sm-10">
-                      <label class="switch">
-                         <input type="checkbox" id="lcsComments">
-                         <span></span>
-                      </label>
-                   </div>
-                </div>
-
-
-                <div class="lcsEditor" id="lcsEditor" style="display:none;">
-                  <div class="form-group">
-                     <div class="col-sm-12">
-                        <div data-role="editor-toolbar" data-target="#editor" class="btn-toolbar btn-editor">
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Font" class="btn btn-default">
-                                 <em class="fa fa-font"></em><b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="" data-edit="fontName Arial" style="font-family:'Arial'">Arial</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontName Sans" style="font-family:'Sans'">Sans</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontName Serif" style="font-family:'Serif'">Serif</a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Font Size" class="btn btn-default">
-                                 <em class="fa fa-text-height"></em>&nbsp;<b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="" data-edit="fontSize 5" style="font-size:24px">Huge</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontSize 3" style="font-size:18px">Normal</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontSize 1" style="font-size:14px">Small</a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="bold" data-toggle="tooltip" title="Bold (Ctrl/Cmd+B)" class="btn btn-default">
-                                 <em class="fa fa-bold"></em>
-                              </a>
-                              <a data-edit="italic" data-toggle="tooltip" title="Italic (Ctrl/Cmd+I)" class="btn btn-default">
-                                 <em class="fa fa-italic"></em>
-                              </a>
-                              <a data-edit="strikethrough" data-toggle="tooltip" title="Strikethrough" class="btn btn-default">
-                                 <em class="fa fa-strikethrough"></em>
-                              </a>
-                              <a data-edit="underline" data-toggle="tooltip" title="Underline (Ctrl/Cmd+U)" class="btn btn-default">
-                                 <em class="fa fa-underline"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="insertunorderedlist" data-toggle="tooltip" title="Bullet list" class="btn btn-default">
-                                 <em class="fa fa-list-ul"></em>
-                              </a>
-                              <a data-edit="insertorderedlist" data-toggle="tooltip" title="Number list" class="btn btn-default">
-                                 <em class="fa fa-list-ol"></em>
-                              </a>
-                              <a data-edit="outdent" data-toggle="tooltip" title="Reduce indent (Shift+Tab)" class="btn btn-default">
-                                 <em class="fa fa-dedent"></em>
-                              </a>
-                              <a data-edit="indent" data-toggle="tooltip" title="Indent (Tab)" class="btn btn-default">
-                                 <em class="fa fa-indent"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="justifyleft" data-toggle="tooltip" title="Align Left (Ctrl/Cmd+L)" class="btn btn-default">
-                                 <em class="fa fa-align-left"></em>
-                              </a>
-                              <a data-edit="justifycenter" data-toggle="tooltip" title="Center (Ctrl/Cmd+E)" class="btn btn-default">
-                                 <em class="fa fa-align-center"></em>
-                              </a>
-                              <a data-edit="justifyright" data-toggle="tooltip" title="Align Right (Ctrl/Cmd+R)" class="btn btn-default">
-                                 <em class="fa fa-align-right"></em>
-                              </a>
-                              <a data-edit="justifyfull" data-toggle="tooltip" title="Justify (Ctrl/Cmd+J)" class="btn btn-default">
-                                 <em class="fa fa-align-justify"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Hyperlink" class="btn btn-default">
-                                 <em class="fa fa-link"></em>
-                              </a>
-                              <div class="dropdown-menu">
-                                 <div class="input-group ml-xs mr-xs">
-                                    <input id="LinkInput" placeholder="URL" type="text" data-edit="createLink" class="form-control input-sm">
-                                    <div class="input-group-btn">
-                                       <button type="button" class="btn btn-sm btn-default">Add</button>
-                                    </div>
-                                 </div>
-                              </div>
-                              <a data-edit="unlink" data-toggle="tooltip" title="Remove Hyperlink" class="btn btn-default">
-                                 <em class="fa fa-cut"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a id="pictureBtn" data-toggle="tooltip" title="Insert picture (or just drag &amp; drop)" class="btn btn-default">
-                                 <em class="fa fa-picture-o"></em>
-                              </a>
-                              <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px">
-                           </div>
-                           <div class="btn-group pull-right">
-                              <a data-edit="undo" data-toggle="tooltip" title="Undo (Ctrl/Cmd+Z)" class="btn btn-default">
-                                 <em class="fa fa-undo"></em>
-                              </a>
-                              <a data-edit="redo" data-toggle="tooltip" title="Redo (Ctrl/Cmd+Y)" class="btn btn-default">
-                                 <em class="fa fa-repeat"></em>
-                              </a>
-                           </div>
-                        </div>
-                        <div style="overflow:scroll; height:250px;max-height:250px" class="form-control wysiwyg mt-lg">Type something ...</div>
-                     </div>
-                  </div>
-                </div>
-
-                <br>
-
-                <h4>Organic vs. Paid Reach</h4>
-                <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
-                <br>
-
-                <div class="form-group">
-                   <label class="col-sm-2 control-label">Comments?</label>
-                   <div class="col-sm-10">
-                      <label class="switch">
-                         <input type="checkbox" id="oprComments">
-                         <span></span>
-                      </label>
-                   </div>
-                </div>
+                    <div class="form-group">
+                       <label class="col-sm-2 control-label">Comments?</label>
+                       <div class="col-sm-10">
+                          <label class="switch">
+                             <input type="checkbox" id="lcsComments">
+                             <span></span>
+                          </label>
+                       </div>
+                    </div>
 
 
-                <div class="oprEditor" id="oprEditor" style="display:none;">
-                  <div class="form-group">
-                     <div class="col-sm-12">
-                        <div data-role="editor-toolbar" data-target="#editor" class="btn-toolbar btn-editor">
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Font" class="btn btn-default">
-                                 <em class="fa fa-font"></em><b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="" data-edit="fontName Arial" style="font-family:'Arial'">Arial</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontName Sans" style="font-family:'Sans'">Sans</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontName Serif" style="font-family:'Serif'">Serif</a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Font Size" class="btn btn-default">
-                                 <em class="fa fa-text-height"></em>&nbsp;<b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="" data-edit="fontSize 5" style="font-size:24px">Huge</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontSize 3" style="font-size:18px">Normal</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontSize 1" style="font-size:14px">Small</a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="bold" data-toggle="tooltip" title="Bold (Ctrl/Cmd+B)" class="btn btn-default">
-                                 <em class="fa fa-bold"></em>
-                              </a>
-                              <a data-edit="italic" data-toggle="tooltip" title="Italic (Ctrl/Cmd+I)" class="btn btn-default">
-                                 <em class="fa fa-italic"></em>
-                              </a>
-                              <a data-edit="strikethrough" data-toggle="tooltip" title="Strikethrough" class="btn btn-default">
-                                 <em class="fa fa-strikethrough"></em>
-                              </a>
-                              <a data-edit="underline" data-toggle="tooltip" title="Underline (Ctrl/Cmd+U)" class="btn btn-default">
-                                 <em class="fa fa-underline"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="insertunorderedlist" data-toggle="tooltip" title="Bullet list" class="btn btn-default">
-                                 <em class="fa fa-list-ul"></em>
-                              </a>
-                              <a data-edit="insertorderedlist" data-toggle="tooltip" title="Number list" class="btn btn-default">
-                                 <em class="fa fa-list-ol"></em>
-                              </a>
-                              <a data-edit="outdent" data-toggle="tooltip" title="Reduce indent (Shift+Tab)" class="btn btn-default">
-                                 <em class="fa fa-dedent"></em>
-                              </a>
-                              <a data-edit="indent" data-toggle="tooltip" title="Indent (Tab)" class="btn btn-default">
-                                 <em class="fa fa-indent"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="justifyleft" data-toggle="tooltip" title="Align Left (Ctrl/Cmd+L)" class="btn btn-default">
-                                 <em class="fa fa-align-left"></em>
-                              </a>
-                              <a data-edit="justifycenter" data-toggle="tooltip" title="Center (Ctrl/Cmd+E)" class="btn btn-default">
-                                 <em class="fa fa-align-center"></em>
-                              </a>
-                              <a data-edit="justifyright" data-toggle="tooltip" title="Align Right (Ctrl/Cmd+R)" class="btn btn-default">
-                                 <em class="fa fa-align-right"></em>
-                              </a>
-                              <a data-edit="justifyfull" data-toggle="tooltip" title="Justify (Ctrl/Cmd+J)" class="btn btn-default">
-                                 <em class="fa fa-align-justify"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Hyperlink" class="btn btn-default">
-                                 <em class="fa fa-link"></em>
-                              </a>
-                              <div class="dropdown-menu">
-                                 <div class="input-group ml-xs mr-xs">
-                                    <input id="LinkInput" placeholder="URL" type="text" data-edit="createLink" class="form-control input-sm">
-                                    <div class="input-group-btn">
-                                       <button type="button" class="btn btn-sm btn-default">Add</button>
-                                    </div>
-                                 </div>
-                              </div>
-                              <a data-edit="unlink" data-toggle="tooltip" title="Remove Hyperlink" class="btn btn-default">
-                                 <em class="fa fa-cut"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a id="pictureBtn" data-toggle="tooltip" title="Insert picture (or just drag &amp; drop)" class="btn btn-default">
-                                 <em class="fa fa-picture-o"></em>
-                              </a>
-                              <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px">
-                           </div>
-                           <div class="btn-group pull-right">
-                              <a data-edit="undo" data-toggle="tooltip" title="Undo (Ctrl/Cmd+Z)" class="btn btn-default">
-                                 <em class="fa fa-undo"></em>
-                              </a>
-                              <a data-edit="redo" data-toggle="tooltip" title="Redo (Ctrl/Cmd+Y)" class="btn btn-default">
-                                 <em class="fa fa-repeat"></em>
-                              </a>
-                           </div>
-                        </div>
-                        <div style="overflow:scroll; height:250px;max-height:250px" class="form-control wysiwyg mt-lg">Type something ...</div>
-                     </div>
-                  </div>
-                </div>
+                    <div class="lcsEditor" id="lcsEditor" style="display:none;">
+                      <div class="form-group">
+                         <div class="col-sm-12">
+                            <div data-role="editor-toolbar" data-target="#editor" class="btn-toolbar btn-editor">
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Font" class="btn btn-default">
+                                     <em class="fa fa-font"></em><b class="caret"></b>
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                     <li><a href="" data-edit="fontName Arial" style="font-family:'Arial'">Arial</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontName Sans" style="font-family:'Sans'">Sans</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontName Serif" style="font-family:'Serif'">Serif</a>
+                                     </li>
+                                  </ul>
+                               </div>
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Font Size" class="btn btn-default">
+                                     <em class="fa fa-text-height"></em>&nbsp;<b class="caret"></b>
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                     <li><a href="" data-edit="fontSize 5" style="font-size:24px">Huge</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontSize 3" style="font-size:18px">Normal</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontSize 1" style="font-size:14px">Small</a>
+                                     </li>
+                                  </ul>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="bold" data-toggle="tooltip" title="Bold (Ctrl/Cmd+B)" class="btn btn-default">
+                                     <em class="fa fa-bold"></em>
+                                  </a>
+                                  <a data-edit="italic" data-toggle="tooltip" title="Italic (Ctrl/Cmd+I)" class="btn btn-default">
+                                     <em class="fa fa-italic"></em>
+                                  </a>
+                                  <a data-edit="strikethrough" data-toggle="tooltip" title="Strikethrough" class="btn btn-default">
+                                     <em class="fa fa-strikethrough"></em>
+                                  </a>
+                                  <a data-edit="underline" data-toggle="tooltip" title="Underline (Ctrl/Cmd+U)" class="btn btn-default">
+                                     <em class="fa fa-underline"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="insertunorderedlist" data-toggle="tooltip" title="Bullet list" class="btn btn-default">
+                                     <em class="fa fa-list-ul"></em>
+                                  </a>
+                                  <a data-edit="insertorderedlist" data-toggle="tooltip" title="Number list" class="btn btn-default">
+                                     <em class="fa fa-list-ol"></em>
+                                  </a>
+                                  <a data-edit="outdent" data-toggle="tooltip" title="Reduce indent (Shift+Tab)" class="btn btn-default">
+                                     <em class="fa fa-dedent"></em>
+                                  </a>
+                                  <a data-edit="indent" data-toggle="tooltip" title="Indent (Tab)" class="btn btn-default">
+                                     <em class="fa fa-indent"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="justifyleft" data-toggle="tooltip" title="Align Left (Ctrl/Cmd+L)" class="btn btn-default">
+                                     <em class="fa fa-align-left"></em>
+                                  </a>
+                                  <a data-edit="justifycenter" data-toggle="tooltip" title="Center (Ctrl/Cmd+E)" class="btn btn-default">
+                                     <em class="fa fa-align-center"></em>
+                                  </a>
+                                  <a data-edit="justifyright" data-toggle="tooltip" title="Align Right (Ctrl/Cmd+R)" class="btn btn-default">
+                                     <em class="fa fa-align-right"></em>
+                                  </a>
+                                  <a data-edit="justifyfull" data-toggle="tooltip" title="Justify (Ctrl/Cmd+J)" class="btn btn-default">
+                                     <em class="fa fa-align-justify"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Hyperlink" class="btn btn-default">
+                                     <em class="fa fa-link"></em>
+                                  </a>
+                                  <div class="dropdown-menu">
+                                     <div class="input-group ml-xs mr-xs">
+                                        <input id="LinkInput" placeholder="URL" type="text" data-edit="createLink" class="form-control input-sm">
+                                        <div class="input-group-btn">
+                                           <button type="button" class="btn btn-sm btn-default">Add</button>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <a data-edit="unlink" data-toggle="tooltip" title="Remove Hyperlink" class="btn btn-default">
+                                     <em class="fa fa-cut"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a id="pictureBtn" data-toggle="tooltip" title="Insert picture (or just drag &amp; drop)" class="btn btn-default">
+                                     <em class="fa fa-picture-o"></em>
+                                  </a>
+                                  <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px">
+                               </div>
+                               <div class="btn-group pull-right">
+                                  <a data-edit="undo" data-toggle="tooltip" title="Undo (Ctrl/Cmd+Z)" class="btn btn-default">
+                                     <em class="fa fa-undo"></em>
+                                  </a>
+                                  <a data-edit="redo" data-toggle="tooltip" title="Redo (Ctrl/Cmd+Y)" class="btn btn-default">
+                                     <em class="fa fa-repeat"></em>
+                                  </a>
+                               </div>
+                            </div>
+                            <div style="overflow:scroll; height:250px;max-height:250px" class="form-control wysiwyg mt-lg" id="lcsCommentContent">Type something ...</div>
+                         </div>
+                      </div>
+                    </div>
 
-                <br>
+                    <br>
 
-                <h4>Top 2 Performing Posts</h4>
-                <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
-                <br>
-                <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
-                <br>
+                    <h4>Organic vs. Paid Reach</h4>
+                    <input type="file" id="lcsFile" data-classbutton="btn btn-default" class="form-control filestyle">
+                    <br>
 
-                <div class="form-group">
-                   <label class="col-sm-2 control-label">Comments?</label>
-                   <div class="col-sm-10">
-                      <label class="switch">
-                         <input type="checkbox" id="topPerfFbComments">
-                         <span></span>
-                      </label>
-                   </div>
-                </div>
+                    <div class="form-group">
+                       <label class="col-sm-2 control-label">Comments?</label>
+                       <div class="col-sm-10">
+                          <label class="switch">
+                             <input type="checkbox" id="oprComments">
+                             <span></span>
+                          </label>
+                       </div>
+                    </div>
 
 
-                <div class="tpfEditor" id="topPerfFbEditor" style="display:none;">
-                  <div class="form-group">
-                     <div class="col-sm-12">
-                        <div data-role="editor-toolbar" data-target="#editor" class="btn-toolbar btn-editor">
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Font" class="btn btn-default">
-                                 <em class="fa fa-font"></em><b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="" data-edit="fontName Arial" style="font-family:'Arial'">Arial</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontName Sans" style="font-family:'Sans'">Sans</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontName Serif" style="font-family:'Serif'">Serif</a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Font Size" class="btn btn-default">
-                                 <em class="fa fa-text-height"></em>&nbsp;<b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="" data-edit="fontSize 5" style="font-size:24px">Huge</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontSize 3" style="font-size:18px">Normal</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontSize 1" style="font-size:14px">Small</a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="bold" data-toggle="tooltip" title="Bold (Ctrl/Cmd+B)" class="btn btn-default">
-                                 <em class="fa fa-bold"></em>
-                              </a>
-                              <a data-edit="italic" data-toggle="tooltip" title="Italic (Ctrl/Cmd+I)" class="btn btn-default">
-                                 <em class="fa fa-italic"></em>
-                              </a>
-                              <a data-edit="strikethrough" data-toggle="tooltip" title="Strikethrough" class="btn btn-default">
-                                 <em class="fa fa-strikethrough"></em>
-                              </a>
-                              <a data-edit="underline" data-toggle="tooltip" title="Underline (Ctrl/Cmd+U)" class="btn btn-default">
-                                 <em class="fa fa-underline"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="insertunorderedlist" data-toggle="tooltip" title="Bullet list" class="btn btn-default">
-                                 <em class="fa fa-list-ul"></em>
-                              </a>
-                              <a data-edit="insertorderedlist" data-toggle="tooltip" title="Number list" class="btn btn-default">
-                                 <em class="fa fa-list-ol"></em>
-                              </a>
-                              <a data-edit="outdent" data-toggle="tooltip" title="Reduce indent (Shift+Tab)" class="btn btn-default">
-                                 <em class="fa fa-dedent"></em>
-                              </a>
-                              <a data-edit="indent" data-toggle="tooltip" title="Indent (Tab)" class="btn btn-default">
-                                 <em class="fa fa-indent"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="justifyleft" data-toggle="tooltip" title="Align Left (Ctrl/Cmd+L)" class="btn btn-default">
-                                 <em class="fa fa-align-left"></em>
-                              </a>
-                              <a data-edit="justifycenter" data-toggle="tooltip" title="Center (Ctrl/Cmd+E)" class="btn btn-default">
-                                 <em class="fa fa-align-center"></em>
-                              </a>
-                              <a data-edit="justifyright" data-toggle="tooltip" title="Align Right (Ctrl/Cmd+R)" class="btn btn-default">
-                                 <em class="fa fa-align-right"></em>
-                              </a>
-                              <a data-edit="justifyfull" data-toggle="tooltip" title="Justify (Ctrl/Cmd+J)" class="btn btn-default">
-                                 <em class="fa fa-align-justify"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Hyperlink" class="btn btn-default">
-                                 <em class="fa fa-link"></em>
-                              </a>
-                              <div class="dropdown-menu">
-                                 <div class="input-group ml-xs mr-xs">
-                                    <input id="LinkInput" placeholder="URL" type="text" data-edit="createLink" class="form-control input-sm">
-                                    <div class="input-group-btn">
-                                       <button type="button" class="btn btn-sm btn-default">Add</button>
-                                    </div>
-                                 </div>
-                              </div>
-                              <a data-edit="unlink" data-toggle="tooltip" title="Remove Hyperlink" class="btn btn-default">
-                                 <em class="fa fa-cut"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a id="pictureBtn" data-toggle="tooltip" title="Insert picture (or just drag &amp; drop)" class="btn btn-default">
-                                 <em class="fa fa-picture-o"></em>
-                              </a>
-                              <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px">
-                           </div>
-                           <div class="btn-group pull-right">
-                              <a data-edit="undo" data-toggle="tooltip" title="Undo (Ctrl/Cmd+Z)" class="btn btn-default">
-                                 <em class="fa fa-undo"></em>
-                              </a>
-                              <a data-edit="redo" data-toggle="tooltip" title="Redo (Ctrl/Cmd+Y)" class="btn btn-default">
-                                 <em class="fa fa-repeat"></em>
-                              </a>
-                           </div>
-                        </div>
-                        <div style="overflow:scroll; height:250px;max-height:250px" class="form-control wysiwyg mt-lg">Type something ...</div>
-                     </div>
-                  </div>
-                </div>
+                    <div class="oprEditor" id="oprEditor" style="display:none;">
+                      <div class="form-group">
+                         <div class="col-sm-12">
+                            <div data-role="editor-toolbar" data-target="#editor" class="btn-toolbar btn-editor">
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Font" class="btn btn-default">
+                                     <em class="fa fa-font"></em><b class="caret"></b>
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                     <li><a href="" data-edit="fontName Arial" style="font-family:'Arial'">Arial</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontName Sans" style="font-family:'Sans'">Sans</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontName Serif" style="font-family:'Serif'">Serif</a>
+                                     </li>
+                                  </ul>
+                               </div>
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Font Size" class="btn btn-default">
+                                     <em class="fa fa-text-height"></em>&nbsp;<b class="caret"></b>
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                     <li><a href="" data-edit="fontSize 5" style="font-size:24px">Huge</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontSize 3" style="font-size:18px">Normal</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontSize 1" style="font-size:14px">Small</a>
+                                     </li>
+                                  </ul>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="bold" data-toggle="tooltip" title="Bold (Ctrl/Cmd+B)" class="btn btn-default">
+                                     <em class="fa fa-bold"></em>
+                                  </a>
+                                  <a data-edit="italic" data-toggle="tooltip" title="Italic (Ctrl/Cmd+I)" class="btn btn-default">
+                                     <em class="fa fa-italic"></em>
+                                  </a>
+                                  <a data-edit="strikethrough" data-toggle="tooltip" title="Strikethrough" class="btn btn-default">
+                                     <em class="fa fa-strikethrough"></em>
+                                  </a>
+                                  <a data-edit="underline" data-toggle="tooltip" title="Underline (Ctrl/Cmd+U)" class="btn btn-default">
+                                     <em class="fa fa-underline"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="insertunorderedlist" data-toggle="tooltip" title="Bullet list" class="btn btn-default">
+                                     <em class="fa fa-list-ul"></em>
+                                  </a>
+                                  <a data-edit="insertorderedlist" data-toggle="tooltip" title="Number list" class="btn btn-default">
+                                     <em class="fa fa-list-ol"></em>
+                                  </a>
+                                  <a data-edit="outdent" data-toggle="tooltip" title="Reduce indent (Shift+Tab)" class="btn btn-default">
+                                     <em class="fa fa-dedent"></em>
+                                  </a>
+                                  <a data-edit="indent" data-toggle="tooltip" title="Indent (Tab)" class="btn btn-default">
+                                     <em class="fa fa-indent"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="justifyleft" data-toggle="tooltip" title="Align Left (Ctrl/Cmd+L)" class="btn btn-default">
+                                     <em class="fa fa-align-left"></em>
+                                  </a>
+                                  <a data-edit="justifycenter" data-toggle="tooltip" title="Center (Ctrl/Cmd+E)" class="btn btn-default">
+                                     <em class="fa fa-align-center"></em>
+                                  </a>
+                                  <a data-edit="justifyright" data-toggle="tooltip" title="Align Right (Ctrl/Cmd+R)" class="btn btn-default">
+                                     <em class="fa fa-align-right"></em>
+                                  </a>
+                                  <a data-edit="justifyfull" data-toggle="tooltip" title="Justify (Ctrl/Cmd+J)" class="btn btn-default">
+                                     <em class="fa fa-align-justify"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Hyperlink" class="btn btn-default">
+                                     <em class="fa fa-link"></em>
+                                  </a>
+                                  <div class="dropdown-menu">
+                                     <div class="input-group ml-xs mr-xs">
+                                        <input id="LinkInput" placeholder="URL" type="text" data-edit="createLink" class="form-control input-sm">
+                                        <div class="input-group-btn">
+                                           <button type="button" class="btn btn-sm btn-default">Add</button>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <a data-edit="unlink" data-toggle="tooltip" title="Remove Hyperlink" class="btn btn-default">
+                                     <em class="fa fa-cut"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a id="pictureBtn" data-toggle="tooltip" title="Insert picture (or just drag &amp; drop)" class="btn btn-default">
+                                     <em class="fa fa-picture-o"></em>
+                                  </a>
+                                  <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px">
+                               </div>
+                               <div class="btn-group pull-right">
+                                  <a data-edit="undo" data-toggle="tooltip" title="Undo (Ctrl/Cmd+Z)" class="btn btn-default">
+                                     <em class="fa fa-undo"></em>
+                                  </a>
+                                  <a data-edit="redo" data-toggle="tooltip" title="Redo (Ctrl/Cmd+Y)" class="btn btn-default">
+                                     <em class="fa fa-repeat"></em>
+                                  </a>
+                               </div>
+                            </div>
+                            <div id="oprCommentContent" style="overflow:scroll; height:250px;max-height:250px" class="form-control wysiwyg mt-lg">Type something ...</div>
+                         </div>
+                      </div>
+                    </div>
 
-                <br>
+                    <br>
 
-                <h4>Lowest Performing Post</h4>
-                <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
-                <br>
-                <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
-                <br>
+                    <h4>Top 2 Performing Posts</h4>
+                    <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
+                    <br>
+                    <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
+                    <br>
 
-                <div class="form-group">
-                   <label class="col-sm-2 control-label">Comments?</label>
-                   <div class="col-sm-10">
-                      <label class="switch">
-                         <input type="checkbox" id="lowPerfFbComments">
-                         <span></span>
-                      </label>
-                   </div>
-                </div>
+                    <div class="form-group">
+                       <label class="col-sm-2 control-label">Comments?</label>
+                       <div class="col-sm-10">
+                          <label class="switch">
+                             <input type="checkbox" id="topPerfFbComments">
+                             <span></span>
+                          </label>
+                       </div>
+                    </div>
 
 
-                <div class="lpfEditor" id="lowPerfFbEditor" style="display:none;">
-                  <div class="form-group">
-                     <div class="col-sm-12">
-                        <div data-role="editor-toolbar" data-target="#editor" class="btn-toolbar btn-editor">
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Font" class="btn btn-default">
-                                 <em class="fa fa-font"></em><b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="" data-edit="fontName Arial" style="font-family:'Arial'">Arial</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontName Sans" style="font-family:'Sans'">Sans</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontName Serif" style="font-family:'Serif'">Serif</a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Font Size" class="btn btn-default">
-                                 <em class="fa fa-text-height"></em>&nbsp;<b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="" data-edit="fontSize 5" style="font-size:24px">Huge</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontSize 3" style="font-size:18px">Normal</a>
-                                 </li>
-                                 <li><a href="" data-edit="fontSize 1" style="font-size:14px">Small</a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="bold" data-toggle="tooltip" title="Bold (Ctrl/Cmd+B)" class="btn btn-default">
-                                 <em class="fa fa-bold"></em>
-                              </a>
-                              <a data-edit="italic" data-toggle="tooltip" title="Italic (Ctrl/Cmd+I)" class="btn btn-default">
-                                 <em class="fa fa-italic"></em>
-                              </a>
-                              <a data-edit="strikethrough" data-toggle="tooltip" title="Strikethrough" class="btn btn-default">
-                                 <em class="fa fa-strikethrough"></em>
-                              </a>
-                              <a data-edit="underline" data-toggle="tooltip" title="Underline (Ctrl/Cmd+U)" class="btn btn-default">
-                                 <em class="fa fa-underline"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="insertunorderedlist" data-toggle="tooltip" title="Bullet list" class="btn btn-default">
-                                 <em class="fa fa-list-ul"></em>
-                              </a>
-                              <a data-edit="insertorderedlist" data-toggle="tooltip" title="Number list" class="btn btn-default">
-                                 <em class="fa fa-list-ol"></em>
-                              </a>
-                              <a data-edit="outdent" data-toggle="tooltip" title="Reduce indent (Shift+Tab)" class="btn btn-default">
-                                 <em class="fa fa-dedent"></em>
-                              </a>
-                              <a data-edit="indent" data-toggle="tooltip" title="Indent (Tab)" class="btn btn-default">
-                                 <em class="fa fa-indent"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a data-edit="justifyleft" data-toggle="tooltip" title="Align Left (Ctrl/Cmd+L)" class="btn btn-default">
-                                 <em class="fa fa-align-left"></em>
-                              </a>
-                              <a data-edit="justifycenter" data-toggle="tooltip" title="Center (Ctrl/Cmd+E)" class="btn btn-default">
-                                 <em class="fa fa-align-center"></em>
-                              </a>
-                              <a data-edit="justifyright" data-toggle="tooltip" title="Align Right (Ctrl/Cmd+R)" class="btn btn-default">
-                                 <em class="fa fa-align-right"></em>
-                              </a>
-                              <a data-edit="justifyfull" data-toggle="tooltip" title="Justify (Ctrl/Cmd+J)" class="btn btn-default">
-                                 <em class="fa fa-align-justify"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group dropdown">
-                              <a data-toggle="dropdown" title="Hyperlink" class="btn btn-default">
-                                 <em class="fa fa-link"></em>
-                              </a>
-                              <div class="dropdown-menu">
-                                 <div class="input-group ml-xs mr-xs">
-                                    <input id="LinkInput" placeholder="URL" type="text" data-edit="createLink" class="form-control input-sm">
-                                    <div class="input-group-btn">
-                                       <button type="button" class="btn btn-sm btn-default">Add</button>
-                                    </div>
-                                 </div>
-                              </div>
-                              <a data-edit="unlink" data-toggle="tooltip" title="Remove Hyperlink" class="btn btn-default">
-                                 <em class="fa fa-cut"></em>
-                              </a>
-                           </div>
-                           <div class="btn-group">
-                              <a id="pictureBtn" data-toggle="tooltip" title="Insert picture (or just drag &amp; drop)" class="btn btn-default">
-                                 <em class="fa fa-picture-o"></em>
-                              </a>
-                              <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px">
-                           </div>
-                           <div class="btn-group pull-right">
-                              <a data-edit="undo" data-toggle="tooltip" title="Undo (Ctrl/Cmd+Z)" class="btn btn-default">
-                                 <em class="fa fa-undo"></em>
-                              </a>
-                              <a data-edit="redo" data-toggle="tooltip" title="Redo (Ctrl/Cmd+Y)" class="btn btn-default">
-                                 <em class="fa fa-repeat"></em>
-                              </a>
-                           </div>
-                        </div>
-                        <div style="overflow:scroll; height:250px;max-height:250px" class="form-control wysiwyg mt-lg">Type something ...</div>
-                     </div>
-                  </div>
-                </div>
+                    <div class="tpfEditor" id="topPerfFbEditor" style="display:none;">
+                      <div class="form-group">
+                         <div class="col-sm-12">
+                            <div data-role="editor-toolbar" data-target="#editor" class="btn-toolbar btn-editor">
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Font" class="btn btn-default">
+                                     <em class="fa fa-font"></em><b class="caret"></b>
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                     <li><a href="" data-edit="fontName Arial" style="font-family:'Arial'">Arial</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontName Sans" style="font-family:'Sans'">Sans</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontName Serif" style="font-family:'Serif'">Serif</a>
+                                     </li>
+                                  </ul>
+                               </div>
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Font Size" class="btn btn-default">
+                                     <em class="fa fa-text-height"></em>&nbsp;<b class="caret"></b>
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                     <li><a href="" data-edit="fontSize 5" style="font-size:24px">Huge</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontSize 3" style="font-size:18px">Normal</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontSize 1" style="font-size:14px">Small</a>
+                                     </li>
+                                  </ul>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="bold" data-toggle="tooltip" title="Bold (Ctrl/Cmd+B)" class="btn btn-default">
+                                     <em class="fa fa-bold"></em>
+                                  </a>
+                                  <a data-edit="italic" data-toggle="tooltip" title="Italic (Ctrl/Cmd+I)" class="btn btn-default">
+                                     <em class="fa fa-italic"></em>
+                                  </a>
+                                  <a data-edit="strikethrough" data-toggle="tooltip" title="Strikethrough" class="btn btn-default">
+                                     <em class="fa fa-strikethrough"></em>
+                                  </a>
+                                  <a data-edit="underline" data-toggle="tooltip" title="Underline (Ctrl/Cmd+U)" class="btn btn-default">
+                                     <em class="fa fa-underline"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="insertunorderedlist" data-toggle="tooltip" title="Bullet list" class="btn btn-default">
+                                     <em class="fa fa-list-ul"></em>
+                                  </a>
+                                  <a data-edit="insertorderedlist" data-toggle="tooltip" title="Number list" class="btn btn-default">
+                                     <em class="fa fa-list-ol"></em>
+                                  </a>
+                                  <a data-edit="outdent" data-toggle="tooltip" title="Reduce indent (Shift+Tab)" class="btn btn-default">
+                                     <em class="fa fa-dedent"></em>
+                                  </a>
+                                  <a data-edit="indent" data-toggle="tooltip" title="Indent (Tab)" class="btn btn-default">
+                                     <em class="fa fa-indent"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="justifyleft" data-toggle="tooltip" title="Align Left (Ctrl/Cmd+L)" class="btn btn-default">
+                                     <em class="fa fa-align-left"></em>
+                                  </a>
+                                  <a data-edit="justifycenter" data-toggle="tooltip" title="Center (Ctrl/Cmd+E)" class="btn btn-default">
+                                     <em class="fa fa-align-center"></em>
+                                  </a>
+                                  <a data-edit="justifyright" data-toggle="tooltip" title="Align Right (Ctrl/Cmd+R)" class="btn btn-default">
+                                     <em class="fa fa-align-right"></em>
+                                  </a>
+                                  <a data-edit="justifyfull" data-toggle="tooltip" title="Justify (Ctrl/Cmd+J)" class="btn btn-default">
+                                     <em class="fa fa-align-justify"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Hyperlink" class="btn btn-default">
+                                     <em class="fa fa-link"></em>
+                                  </a>
+                                  <div class="dropdown-menu">
+                                     <div class="input-group ml-xs mr-xs">
+                                        <input id="LinkInput" placeholder="URL" type="text" data-edit="createLink" class="form-control input-sm">
+                                        <div class="input-group-btn">
+                                           <button type="button" class="btn btn-sm btn-default">Add</button>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <a data-edit="unlink" data-toggle="tooltip" title="Remove Hyperlink" class="btn btn-default">
+                                     <em class="fa fa-cut"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a id="pictureBtn" data-toggle="tooltip" title="Insert picture (or just drag &amp; drop)" class="btn btn-default">
+                                     <em class="fa fa-picture-o"></em>
+                                  </a>
+                                  <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px">
+                               </div>
+                               <div class="btn-group pull-right">
+                                  <a data-edit="undo" data-toggle="tooltip" title="Undo (Ctrl/Cmd+Z)" class="btn btn-default">
+                                     <em class="fa fa-undo"></em>
+                                  </a>
+                                  <a data-edit="redo" data-toggle="tooltip" title="Redo (Ctrl/Cmd+Y)" class="btn btn-default">
+                                     <em class="fa fa-repeat"></em>
+                                  </a>
+                               </div>
+                            </div>
+                            <div style="overflow:scroll; height:250px;max-height:250px" class="form-control wysiwyg mt-lg">Type something ...</div>
+                         </div>
+                      </div>
+                    </div>
 
-                <br>
+                    <br>
 
-                <h2>Facebook Statistics</h2>
+                    <h4>Lowest Performing Post</h4>
+                    <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
+                    <br>
+                    <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
+                    <br>
 
-                <h4>The people who like your page.</h4>
-                <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
+                    <div class="form-group">
+                       <label class="col-sm-2 control-label">Comments?</label>
+                       <div class="col-sm-10">
+                          <label class="switch">
+                             <input type="checkbox" id="lowPerfFbComments">
+                             <span></span>
+                          </label>
+                       </div>
+                    </div>
 
-                <h4>The people who have liked, commented on, or shared your post or engaged with your Page in the past 28 days.</h4>
-                <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
-             </div>
-             <div class="panel-footer"><button type="button" class="mb-sm btn btn-primary">Save</button></div>
-          </div>
-       </div>
+
+                    <div class="lpfEditor" id="lowPerfFbEditor" style="display:none;">
+                      <div class="form-group">
+                         <div class="col-sm-12">
+                            <div data-role="editor-toolbar" data-target="#editor" class="btn-toolbar btn-editor">
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Font" class="btn btn-default">
+                                     <em class="fa fa-font"></em><b class="caret"></b>
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                     <li><a href="" data-edit="fontName Arial" style="font-family:'Arial'">Arial</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontName Sans" style="font-family:'Sans'">Sans</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontName Serif" style="font-family:'Serif'">Serif</a>
+                                     </li>
+                                  </ul>
+                               </div>
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Font Size" class="btn btn-default">
+                                     <em class="fa fa-text-height"></em>&nbsp;<b class="caret"></b>
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                     <li><a href="" data-edit="fontSize 5" style="font-size:24px">Huge</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontSize 3" style="font-size:18px">Normal</a>
+                                     </li>
+                                     <li><a href="" data-edit="fontSize 1" style="font-size:14px">Small</a>
+                                     </li>
+                                  </ul>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="bold" data-toggle="tooltip" title="Bold (Ctrl/Cmd+B)" class="btn btn-default">
+                                     <em class="fa fa-bold"></em>
+                                  </a>
+                                  <a data-edit="italic" data-toggle="tooltip" title="Italic (Ctrl/Cmd+I)" class="btn btn-default">
+                                     <em class="fa fa-italic"></em>
+                                  </a>
+                                  <a data-edit="strikethrough" data-toggle="tooltip" title="Strikethrough" class="btn btn-default">
+                                     <em class="fa fa-strikethrough"></em>
+                                  </a>
+                                  <a data-edit="underline" data-toggle="tooltip" title="Underline (Ctrl/Cmd+U)" class="btn btn-default">
+                                     <em class="fa fa-underline"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="insertunorderedlist" data-toggle="tooltip" title="Bullet list" class="btn btn-default">
+                                     <em class="fa fa-list-ul"></em>
+                                  </a>
+                                  <a data-edit="insertorderedlist" data-toggle="tooltip" title="Number list" class="btn btn-default">
+                                     <em class="fa fa-list-ol"></em>
+                                  </a>
+                                  <a data-edit="outdent" data-toggle="tooltip" title="Reduce indent (Shift+Tab)" class="btn btn-default">
+                                     <em class="fa fa-dedent"></em>
+                                  </a>
+                                  <a data-edit="indent" data-toggle="tooltip" title="Indent (Tab)" class="btn btn-default">
+                                     <em class="fa fa-indent"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a data-edit="justifyleft" data-toggle="tooltip" title="Align Left (Ctrl/Cmd+L)" class="btn btn-default">
+                                     <em class="fa fa-align-left"></em>
+                                  </a>
+                                  <a data-edit="justifycenter" data-toggle="tooltip" title="Center (Ctrl/Cmd+E)" class="btn btn-default">
+                                     <em class="fa fa-align-center"></em>
+                                  </a>
+                                  <a data-edit="justifyright" data-toggle="tooltip" title="Align Right (Ctrl/Cmd+R)" class="btn btn-default">
+                                     <em class="fa fa-align-right"></em>
+                                  </a>
+                                  <a data-edit="justifyfull" data-toggle="tooltip" title="Justify (Ctrl/Cmd+J)" class="btn btn-default">
+                                     <em class="fa fa-align-justify"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group dropdown">
+                                  <a data-toggle="dropdown" title="Hyperlink" class="btn btn-default">
+                                     <em class="fa fa-link"></em>
+                                  </a>
+                                  <div class="dropdown-menu">
+                                     <div class="input-group ml-xs mr-xs">
+                                        <input id="LinkInput" placeholder="URL" type="text" data-edit="createLink" class="form-control input-sm">
+                                        <div class="input-group-btn">
+                                           <button type="button" class="btn btn-sm btn-default">Add</button>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <a data-edit="unlink" data-toggle="tooltip" title="Remove Hyperlink" class="btn btn-default">
+                                     <em class="fa fa-cut"></em>
+                                  </a>
+                               </div>
+                               <div class="btn-group">
+                                  <a id="pictureBtn" data-toggle="tooltip" title="Insert picture (or just drag &amp; drop)" class="btn btn-default">
+                                     <em class="fa fa-picture-o"></em>
+                                  </a>
+                                  <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px">
+                               </div>
+                               <div class="btn-group pull-right">
+                                  <a data-edit="undo" data-toggle="tooltip" title="Undo (Ctrl/Cmd+Z)" class="btn btn-default">
+                                     <em class="fa fa-undo"></em>
+                                  </a>
+                                  <a data-edit="redo" data-toggle="tooltip" title="Redo (Ctrl/Cmd+Y)" class="btn btn-default">
+                                     <em class="fa fa-repeat"></em>
+                                  </a>
+                               </div>
+                            </div>
+                            <div style="overflow:scroll; height:250px;max-height:250px" class="form-control wysiwyg mt-lg">Type something ...</div>
+                         </div>
+                      </div>
+                    </div>
+
+                    <br>
+
+                    <h2>Facebook Statistics</h2>
+
+                    <h4>The people who like your page.</h4>
+                    <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
+
+                    <h4>The people who have liked, commented on, or shared your post or engaged with your Page in the past 28 days.</h4>
+                    <input type="file" data-classbutton="btn btn-default" class="form-control filestyle">
+                 </div>
+                 <div class="panel-footer"><button type="button" class="mb-sm btn btn-primary" id="saveFbStats">Save</button></div>
+              </div>
+           </div>
+         </form>
      </div>
      <div class="col-md-12">
        <div id="instagramDetails" class="panel panel-default panel-demo">
